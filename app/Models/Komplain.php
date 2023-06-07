@@ -10,6 +10,7 @@ class Komplain extends Model
     use HasFactory;
 
     protected $table = 'komplain';
+    protected $primaryKey = 'id_komplain';
 
     protected $fillable = [
         'komplain',

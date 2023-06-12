@@ -14,11 +14,11 @@
       <div class="form-container register-container">
         <form method="POST"  action="{{ route('login')}}">
         @csrf  
-        <h1>Daftar Dulu Bego</h1>
+        <h1>Ini Form Regist</h1>
 
-          <input type="text" placeholder="Name" id="name" name="name" />
-          <input type="email" placeholder="Email" id="email" name="email"/>
-          <input type="password" placeholder="Password" id="password" name="password" />
+          <input type="text" placeholder="Name" id="name" name="name" required/>
+          <input type="email" placeholder="Email" id="email" name="email" required/>
+          <input type="password" placeholder="Password" id="password" name="password" required />
           <button>Daftar</button>
           <div class="login-tombol">
             <a href="#">atau</a>
@@ -31,9 +31,9 @@
       <div class="form-container login-container">
         <form method="POST" action="{{ route('login')}}">
           @csrf
-          <h1>Login Sini Njing</h1>
-          <input type="email" placeholder="Email" id="email" name="email"/>
-          <input type="password" placeholder="Password" id="password" name="password"/>
+          <h1>Silahkan Login</h1>
+          <input type="email" placeholder="Email" id="email" name="email" required/>
+          <input type="password" placeholder="Password" id="password" name="password" required/>
           <div class="content">
             <div class="checkbox">
               <input type="checkbox" name="checkbox" id="checkbox" />
@@ -56,8 +56,8 @@
       <div class="overlay-container">
         <div class="overlay">
           <div class="overlay-panel overlay-left">
-            <h1 class="title">Oi Goblog</h1>
-            <p>Kalo Udah Punya Akun Klik Sini Ngentot</p>
+            <h1 class="title">Halooo</h1>
+            <p>Kalo Udah Punya Akin Sini</p>
             <button class="ghost" id="login">
               Login
               <i class="lni lni-arrow-left login"></i>
@@ -65,7 +65,7 @@
           </div>
           <div class="overlay-panel overlay-right">
             <h1 class="title">Ini Buat Daftar</h1>
-            <p>Kalo Belom Punya Akun Ya Daftar Dulu Ogeb.</p>
+            <p>Kalo Belom Punya Akun Sini</p>
             <button class="ghost" id="register">
               Daftar
               <i class="lni lni-arrow-right register"></i>

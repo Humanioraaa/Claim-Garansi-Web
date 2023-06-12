@@ -9,27 +9,37 @@ class AuthController extends Controller
 {
     public function login()
     {
-
         return view('login');
     }
 
     public function authenticate(Request $request)
     {
-
-        $credentials = $request->validate([
-            'email' => ['required', 'email'],
+        $credetials = $request->validate([
+            'email' => ['required'],
             'password' => ['required'],
         ]);
- 
-        if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
- 
-            return redirect()->intended('/service');
-        }
-        
-        session::flash('status', 'fail');
-        session::flash('message', 'login failed');
 
-        return redirect('/service');
+        //checking login valid
+        if (Auth::attempt($credetials)) {
+            //manager
+            if (Auth::user()->id_role == 1) {
+                return redirect('/1_manager_dashboard');
+            }
+            //admin garansi
+            if (Auth::user()->id_role == 2) {
+                return redirect('/2_admingaransi_dashboard');
+            }
+            //administrator
+            if (Auth::user()->id_role == 3) {
+                return redirect('/3_administrator_dashboard');
+            }
+            //user
+            if (Auth::user()->id_role == 4) {
+                return redirect('/service');
+            }
+        }
+        //error
+        return back()->with('error', 'Error Email or Password');
     }
+
 }

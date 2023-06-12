@@ -10,6 +10,7 @@ class Admin_Garansi extends Model
     use HasFactory;
 
     protected $table = 'admin_garansi';
+    protected $primaryKey = 'id_admin_garansi';
 
     protected $fillable = [
         'username_admin_garansi',

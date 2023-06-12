@@ -12,7 +12,7 @@
   <!-- Regist -->
     <div class="container" id="container">
       <div class="form-container register-container">
-        <form method="POST"  action="{{ route('login')}}">
+        <form method="POST"  action="{{ route('register') }}">
         @csrf  
         <h1>Ini Form Regist</h1>
 
@@ -29,7 +29,7 @@
 
       <!-- login -->
       <div class="form-container login-container">
-        <form method="POST" action="{{ route('login')}}">
+        <form method="POST" action="{{ route('login') }}">
           @csrf
           <h1>Silahkan Login</h1>
           <input type="email" placeholder="Email" id="email" name="email" required/>

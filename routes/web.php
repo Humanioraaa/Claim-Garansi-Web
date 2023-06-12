@@ -19,7 +19,10 @@ use App\Http\Controllers\AdminGaransi_Controller;
 
 
 Route::get('/login', [AuthController::class, 'login'])->name('login');
-Route::post('/login', [AuthController::class, 'authenticate'])->name('login');
+Route::post('/login', [AuthController::class, 'authenticate']);
+
+Route::get('/register', [AuthController::class, 'register'])->name('register');
+Route::post('/register', [AuthController::class, 'store']);
 
 
 Route::get('/1_manager_dashboard', [ManagerController::class, 'index']);

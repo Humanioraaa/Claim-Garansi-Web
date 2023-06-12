@@ -196,8 +196,7 @@
                     <a href="service-details.html">Status Pengajuan Garansi</a>
                   </h4>
                   <p>
-                    Quitox is the best quaint james victoria sponge happy days
-                    cras.Quitox is the best of the seen.
+                    alsdkjhafshdkaaaaaaaaaaaaaaaaaaaaasjjjjjjjjjj
                   </p>
                 </div>
                 <div class="tp-service__link">

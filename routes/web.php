@@ -24,3 +24,11 @@ Route::get('/service', function() {
 
 
 Route::get('/input', [barangController::class, 'store']);
+
+Route::get('/upload', function() {
+    return view('upload');
+});
+
+Route::get('/riwayat', function() {
+    return view('riwayat');
+});

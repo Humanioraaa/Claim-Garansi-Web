@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\barangController;
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +14,12 @@ use App\Http\Controllers\barangController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/login', [AuthController::class, 'login'])->name('login');
+Route::post('/login', [AuthController::class, 'authenticate']);
 
+
+Route::get('/login', [AuthController::class, 'login'])->name('login');
+Route::post('/login', [AuthController::class, 'authenticate'])->name('login');
 
 Route::get('/service', function() {
     return view('service');

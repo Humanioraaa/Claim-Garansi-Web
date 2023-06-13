@@ -45,3 +45,7 @@ Route::get('/upload', function() {
 Route::get('/riwayat', function() {
     return view('riwayat');
 });
+
+Route::get('/1_manager_chart', function() {
+    return view('1_manager_chart');
+});

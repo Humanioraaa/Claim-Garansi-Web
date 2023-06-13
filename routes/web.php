@@ -1,11 +1,12 @@
 <?php
 
+use App\Http\Controllers\RoleManager;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\barangController;
 use App\Http\Controllers\ManagerController;
-use App\Http\Controllers\AdministratorController;
 use App\Http\Controllers\AdminGaransi_Controller;
+use App\Http\Controllers\AdministratorController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,11 +34,6 @@ Route::group(['middleware' => 'guestonly'], function () {
 
 
 
-
-
-
-
-
 Route::get('/input', [barangController::class, 'store']);
 
 
@@ -48,11 +44,12 @@ Route::get('/1_manager_dashboard', [ManagerController::class, 'index'])->middlew
 
 Route::get('/managerchart', function() {
     return view('1_manager_chart');
-});
+})->middleware('manageronly');
 
-Route::get('/rolemanager', function() {
-    return view('1_manager_atur_role');
-});
+Route::get('/1_manager_atur_role',  [RoleManager::class, 'index'])->middleware('manageronly');
+
+    //ganti role
+    Route::put('/user_edit/{id}', [UserController::class, 'changerole']);
 
 
 //Admin Garansi

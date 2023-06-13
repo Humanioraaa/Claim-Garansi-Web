@@ -485,109 +485,45 @@
                     <table class="table table-striped mb-0">
                       <thead>
                         <tr>
+                          <th>No</th>
                           <th>Customer</th>
                           <th>Email</th>
-                          <th>Contact No</th>
+                          <th>Role</th>
                           <th class="text-right">Action</th>
+                          
                         </tr>
                       </thead>
                       <tbody>
+                        @foreach($users as $item)
                         <tr>
                           <td>
-                            <img
-                              src="assets/images/users/user-3.jpg"
-                              alt=""
-                              class="rounded-circle thumb-xs mr-1"
-                            />
-                            Aaron Poulin
+                            {{$loop->iteration}}
                           </td>
-                          <td>Aaron@example.com</td>
-                          <td>+21 21547896</td>
-                          <td class="text-right">
-                          <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Dropdown button
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" href="#">Action</a>
-                              <a class="dropdown-item" href="#">Another action</a>
-                              <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                          </div>
-                          </td>
-                        </tr>
-                        <tr>
                           <td>
-                            <img
-                              src="assets/images/users/user-4.jpg"
-                              alt=""
-                              class="rounded-circle thumb-xs mr-1"
-                            />
-                            Richard Ali
+                            {{$item->name}}
                           </td>
-                          <td>Richard@example.com</td>
-                          <td>+41 21547896</td>
+                          <td>{{$item->email}}</td>
+                          <td>{{$item->role->name}}</td>
                           <td class="text-right">
-                          <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Dropdown button
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" href="#">Action</a>
-                              <a class="dropdown-item" href="#">Another action</a>
-                              <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                          </div>
+                      <form action="/user_edit/{{$item->id}}" method="post" enctype="multipart/form-data">
+                        @csrf
+                        @method('put')
+                          <select
+                            class="select2 form-control mb-3 custom-select"
+                            style="width: 100%; height: 36px" name="id_role" id="id_role"
+                          >
+                        
+                        @foreach($role as $user)
+                          <option value="{{$user->id}}">{{$user->name}}</option>
+                        @endforeach
+                        
+                        </select>
+                        <button type="button" class="btn btn-success">Success</button>
+                      </form>
                           </td>
+                          
                         </tr>
-                        <tr>
-                          <td>
-                            <img
-                              src="assets/images/users/user-5.jpg"
-                              alt=""
-                              class="rounded-circle thumb-xs mr-1"
-                            />
-                            Juan Clark
-                          </td>
-                          <td>Juan@example.com</td>
-                          <td>+65 21547896</td>
-                          <td class="text-right">
-                          <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Dropdown button
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" href="#">Action</a>
-                              <a class="dropdown-item" href="#">Another action</a>
-                              <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                          </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <img
-                              src="assets/images/users/user-6.jpg"
-                              alt=""
-                              class="rounded-circle thumb-xs mr-1"
-                            />
-                            Albert Hull
-                          </td>
-                          <td>Albert@example.com</td>
-                          <td>+88 21547896</td>
-                          <td class="text-right">
-                          <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Dropdown button
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" href="#">Action</a>
-                              <a class="dropdown-item" href="#">Another action</a>
-                              <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                          </div>
-                          </td>
-                        </tr>
+                        @endforeach
                       </tbody>
                     </table>
                     <!--end /table-->
@@ -603,8 +539,6 @@
           <!-- end row -->
         </div>
         <!-- container -->
-
-        
       </div>
       <!-- end page content -->
     </div>

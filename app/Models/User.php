@@ -47,4 +47,10 @@ class User extends Authenticatable
     protected $attributes = [
         'id_role' => 4
     ];
+
+    public function role()
+    {
+        return $this->belongsTo(Roles::class, 'id_role');
+    }
+
 }

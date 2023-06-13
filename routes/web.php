@@ -46,6 +46,10 @@ Route::get('/riwayat', function() {
     return view('riwayat');
 });
 
-Route::get('/1_manager_chart', function() {
+Route::get('/managerchart', function() {
     return view('1_manager_chart');
+});
+
+Route::get('/statuspage', function() {
+    return view('4_user_statuspage');
 });

@@ -31,7 +31,7 @@
         <!--NAVIGATION ******************************************************************************************-->
         <header id="header">
           <nav class="navbar navbar-light ts-separate-bg-element">
-            <a class="navbar-brand" href="#"> GARANSI </a>
+            <a class="navbar-brand" href=""> GARANSI </a>
             <!--end navbar-brand-->
 
             <!--end navbar-toggler-->
@@ -48,8 +48,8 @@
               <div class="col-md-6">
                 <h1>Claim Garansi Anda<br />Sekarang</h1>
                 <p>Claim Garansi Device Anda Sekarang Lebih Mudah Dan Cepat.</p>
-                <a href="#" class="btn btn-primary mr-2">Login</a>
-                <a href="#" class="btn btn-outline-dark"
+                <a href="/login" class="btn btn-primary mr-2">Login</a>
+                <a href="/login" class="btn btn-outline-dark"
                   ><i class="fa fa-play mr-2"></i>Register</a
                 >
               </div>

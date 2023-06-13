@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
-class Administrator_Only
+class User_Only
 {
     /**
      * Handle an incoming request.
@@ -16,7 +16,7 @@ class Administrator_Only
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(Auth::user()->id_role !=3) {
+        if(Auth::user()->id_role !=4) {
             return redirect('login');
         }
         return $next($request);

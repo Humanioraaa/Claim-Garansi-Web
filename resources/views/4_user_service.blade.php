@@ -94,7 +94,7 @@
                 <a
                   class="tp-btn-blue-square d-none d-md-block"
                   href="login.html"
-                  ><span>Login</span></a
+                  ><span>Logout</span></a
                 >
                 <a class="tp-header__bars tp-menu-bar d-lg-none" href="#"
                   ><i class="far fa-bars"></i
@@ -153,7 +153,7 @@
                 </div>
                 <div class="tp-service__content">
                   <h4 class="tp-service__title-sm">
-                    <a href="Dastyle-v1.1/dastyle_v1.1/forms-advanced.html"
+                    <a href="/upload"
                       >Pengajuan Garansi</a
                     >
                   </h4>
@@ -163,7 +163,7 @@
                   </p>
                 </div>
                 <div class="tp-service__link">
-                  <a href="Dastyle-v1.1/dastyle_v1.1/forms-advanced.html">
+                  <a href="/upload">
                     <svg
                       width="39"
                       height="16"
@@ -193,14 +193,14 @@
                 </div>
                 <div class="tp-service__content">
                   <h4 class="tp-service__title-sm">
-                    <a href="service-details.html">Status Pengajuan Garansi</a>
+                    <a href="/statuspage">Status Pengajuan Garansi</a>
                   </h4>
                   <p>
                     alsdkjhafshdkaaaaaaaaaaaaaaaaaaaaasjjjjjjjjjj
                   </p>
                 </div>
                 <div class="tp-service__link">
-                  <a href="service-details.html">
+                  <a href="/statuspage">
                     <svg
                       width="39"
                       height="16"
@@ -230,7 +230,7 @@
                 </div>
                 <div class="tp-service__content">
                   <h4 class="tp-service__title-sm">
-                    <a href="service-details.html">Riwayat</a>
+                    <a href="/riwayat">Riwayat</a>
                   </h4>
                   <p>
                     Quitox is the best quaint james victoria sponge happy days
@@ -238,7 +238,7 @@
                   </p>
                 </div>
                 <div class="tp-service__link">
-                  <a href="service-details.html">
+                  <a href="/riwayat">
                     <svg
                       width="39"
                       height="16"
@@ -268,7 +268,7 @@
                 </div>
                 <div class="tp-service__content">
                   <h4 class="tp-service__title-sm">
-                    <a href="service-details.html">Contact</a>
+                    <a href="/contact">Contact</a>
                   </h4>
                   <p>
                     Quitox is the best quaint james victoria sponge happy days
@@ -276,7 +276,7 @@
                   </p>
                 </div>
                 <div class="tp-service__link">
-                  <a href="service-details.html">
+                  <a href="/contact">
                     <svg
                       width="39"
                       height="16"
@@ -306,7 +306,7 @@
                 </div>
                 <div class="tp-service__content">
                   <h4 class="tp-service__title-sm">
-                    <a href="service-details.html">FAQ</a>
+                    <a href="/faq">FAQ</a>
                   </h4>
                   <p>
                     Quitox is the best quaint james victoria sponge happy days
@@ -314,7 +314,7 @@
                   </p>
                 </div>
                 <div class="tp-service__link">
-                  <a href="service-details.html">
+                  <a href="/faq">
                     <svg
                       width="39"
                       height="16"
@@ -344,7 +344,7 @@
                 </div>
                 <div class="tp-service__content">
                   <h4 class="tp-service__title-sm">
-                    <a href="service-details.html">About</a>
+                    <a href="/about">About</a>
                   </h4>
                   <p>
                     Quitox is the best quaint james victoria sponge happy days
@@ -352,7 +352,7 @@
                   </p>
                 </div>
                 <div class="tp-service__link">
-                  <a href="service-details.html">
+                  <a href="/about">
                     <svg
                       width="39"
                       height="16"

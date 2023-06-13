@@ -17,7 +17,7 @@ use App\Http\Controllers\AdminGaransi_Controller;
 |
 */
 
-
+//Login
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'authenticate']);
 
@@ -32,24 +32,54 @@ Route::get('/service', [UserController::class, 'index']);
 
 
 Route::get('/service', function() {
-    return view('service');
+    return view('4_user_service');
 });
 
 
 Route::get('/input', [barangController::class, 'store']);
 
-Route::get('/upload', function() {
-    return view('upload');
+//landing Page
+Route::get('/home', function() {
+    return view('landing_page');
 });
 
-Route::get('/riwayat', function() {
-    return view('riwayat');
-});
+
+//Manager
 
 Route::get('/managerchart', function() {
     return view('1_manager_chart');
 });
 
+Route::get('/rolemanager', function() {
+    return view('1_manager_atur_role');
+});
+
+
+//User
+
+Route::get('/upload', function() {
+    return view('4_user_upload');
+});
+
+Route::get('/riwayat', function() {
+    return view('4_user_riwayat');
+});
+
+
 Route::get('/statuspage', function() {
     return view('4_user_statuspage');
 });
+
+Route::get('/faq', function() {
+    return view('4_user_faq');
+});
+
+Route::get('/contact', function() {
+    return view('4_user_contact');
+});
+
+Route::get('/about', function() {
+    return view('4_user_about');
+});
+
+

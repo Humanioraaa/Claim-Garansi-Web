@@ -20,6 +20,8 @@ class Guest_Only
         {
             return $next($request);
         }
+        // User is not authenticated, return an appropriate response
+        return redirect('/login');
        
     }
 

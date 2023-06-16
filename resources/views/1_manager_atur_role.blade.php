@@ -513,12 +513,14 @@
                             style="width: 100%; height: 36px" name="id_role" id="id_role"
                           >
                         
-                        @foreach($role as $user)
-                          <option value="{{$user->id}}">{{$user->name}}</option>
-                        @endforeach
+                       
+                          <option value=1>A</option>
+                          <option value=2>b</option>
+                          <option value=3>c</option>
+                          <option value=4>d</option>
                         
                         </select>
-                        <button type="button" class="btn btn-success">Success</button>
+                        <a href="/1_manager_atur_role" type="submit" class="btn btn-success">Success</button>
                       </form>
                           </td>
                           

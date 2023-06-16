@@ -17,7 +17,7 @@ class Administrator_Only
     public function handle(Request $request, Closure $next): Response
     {
         if(Auth::user()->id_role !=3) {
-            return redirect('login');
+            return redirect('home');
         }
         return $next($request);
     }

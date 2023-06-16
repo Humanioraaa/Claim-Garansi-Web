@@ -15,11 +15,12 @@ class RoleManager extends Controller
         return view('1_manager_atur_role', compact('users', 'role'));
     }
 
-    public function changerole($id, Request $request){
+    public function changerole(Request $request, $id){
+       
         $users = User::find($id);
         $users->id_role=$request->input('id_role');
         $users->update();
     
-        return redirect('/1_manager_atur_role');
+        return redirect('/1_manager_atur_role')->with('flash', 'Account is geupdate');
     }
 }

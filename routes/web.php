@@ -25,14 +25,13 @@ use App\Http\Controllers\AdministratorController;
 
 
 
-Route::group(['middleware' => 'guestonly'], function () {
+//Route::group(['middleware' => 'guestonly'], function () {});
+
+//Guest Routes
+
     Route::get('/', function() {
         return view('landing_page');
     });
-
-
-});
-
 
     // login register
     Route::get('/login', [AuthController::class, 'login'])->name('login');
@@ -84,6 +83,9 @@ Route::get('/service', function() {
 Route::get('/upload', function() {
     return view('4_user_upload');
 })->middleware('useronly');
+Route::post('/upload', function() {
+    return view('4_user_upload');
+})->middleware('useronly');
 
 Route::get('/riwayat', function() {
     return view('4_user_riwayat');
@@ -105,5 +107,10 @@ Route::get('/contact', function() {
 Route::get('/about', function() {
     return view('4_user_about');
 })->middleware('useronly');
+
+
+Route::get('/barang', [barangController::class, 'add']);
+Route::post('/barang', [barangController::class, 'store']);
+
 
 

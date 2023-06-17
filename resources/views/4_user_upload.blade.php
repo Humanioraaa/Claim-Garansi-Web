@@ -62,6 +62,8 @@
       <!-- Top Bar End -->
 
       <!-- Page Content-->
+      <form action="barang" metod="post">
+        @csrf
       <div class="page-content">
         <div class="container-fluid">
           <!-- Page-Title -->
@@ -79,37 +81,37 @@
                 <div class="card-body bootstrap-select-1">
                   <div class="row">
                     <div class="col-md-6">
-                    <label class="mb-3">Jenis</label>
+                    <label class="mb-3" for="jenis_barang">Jenis</label>
                       <select
                         class="select2 form-control mb-3 custom-select"
-                        style="width: 100%; height: 36px"
+                        style="width: 100%; height: 36px" name="jenis_barang" id="jenis_barang"
                       >
                         <option>Select</option>
-                          <option value="AL">Laptop</option>
-                          <option value="AR">Smartphone</option>
-                          <option value="IL">Computer</option>
-                          <option value="IA">Monitor</option>
+                          <option value="laptop">Laptop</option>
+                          <option value="phone">Smartphone</option>
+                          <option value="PC">Computer</option>
+                          <option value="monitor">Monitor</option>
                  
                         
                       </select>
                     </div>
                     <!-- end col -->
                     <div class="col-md-6">
-                    <label class="mb-3">Merk</label>
+                    <label class="mb-3" for="merk_barang">Merk</label>
                       <select
                         class="select2 form-control mb-3 custom-select"
-                        style="width: 100%; height: 36px"
+                        style="width: 100%; height: 36px" name="merk_barang" id="merk_barang"
                       >
                         <option>Select</option>
                        
                         
-                          <option value="AL">Asus</option>
-                          <option value="AR">Acer</option>
-                          <option value="IL">Dell</option>
-                          <option value="IA">MSI</option>
-                          <option value="KS">Lenovo</option>
-                          <option value="KY">Samsung</option>
-                          <option value="LA">Apple</option>
+                          <option value="asus">Asus</option>
+                          <option value="acer">Acer</option>
+                          <option value="dell">Dell</option>
+                          <option value="msi">MSI</option>
+                          <option value="lenovo">Lenovo</option>
+                          <option value="samsung">Samsung</option>
+                          <option value="apple">Apple</option>
                          
                         
                       </select>
@@ -130,61 +132,20 @@
 
           <!--Row 2-->
           <div class="row">
-            <div class="col-lg-6">
+
+          <div class="col-lg">
+            
               <div class="card">
-                <div class="card-header">
-                  <p class="text-muted mb-0">Pilih Tanggal Pembelian</p>
-                </div>
-                <!--end card-header-->
-                <div class="card-body">
-                  <label class="my-3">Tanggal Pembelian</label>
-                  <div class="input-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="birthday"
-                      value="10/24/1984"
-                    />
-                    <div class="input-group-append">
-                      <span class="input-group-text"
-                        ><i class="dripicons-calendar"></i
-                      ></span>
-                    </div>
-                  </div>
-                  <label class="my-3">Ranges Tanggal</label>
-                  <div class="input-group">
-                    <input
-                      type="text"
-                      id="reportrange"
-                      class="form-control"
-                      value="10/24/1984"
-                    />
-                    <div class="input-group-append">
-                      <span class="input-group-text"
-                        ><i class="dripicons-calendar"></i
-                      ></span>
-                    </div>
-                  </div>
-                </div>
-                <!--end card-body-->
-              </div>
-              <!--end card-->
-            </div>
-            <!--end col-->
-            <div class="col-lg-6">
-              <div class="card">
+                <!-- 
                 <div class="card-header">
                   <h4 class="card-title">Deskripsi Kerusakan Produk</h4>
                   <p class="text-muted mb-0">
                     askdlhrldasnlkhdowaskdlasjdoiwldkjasljdqiwjodjlsa
                   </p>
                 </div>
-                <!--end card-header-->
-               
-                                       
-                                    
-                
+                -->
                 <div class="card-body">
+                  <!-- 
                   <div class="mt-3 mb-3">
                     <textarea
                       id="textarea"
@@ -194,31 +155,75 @@
                       placeholder="Tulis"
                     ></textarea>
                   </div>
+                  -->
+                  <input type="hidden" name="user_id" value="{{ $users->id }}">
                       
-                  <p class="text-muted mb-3 font-13">
-                          Masukan Jumlah Barang:
-                  </p>
-                      <input type="number" class="form-control" maxlength="25" name="defaultconfig" id="defaultconfig" /> 
+                  <label class="mb-3" for="jumlah_barang">Jumlah Barang</label>
+                      <input type="number" class="form-control" maxlength="25" name="jumlah_barang" id="jumlah_barang" /> 
                       
-                      <p class="text-muted mb-3 font-13">
-                          Masukan Harga:
-                  </p>
-                      <input type="number" class="form-control" maxlength="25" name="defaultconfig" id="defaultconfig" /> 
+                      <label class="mb-3" for="harga_barang">harga Barang</label>
+                      <input type="number" class="form-control" maxlength="25" name="harga_barang" id="harga_barang" /> 
                 </div>
               </div>
-              <!--End Row 3-->
+              
             </div>
+            
+            
+            <div class="col-lg">
+              <div class="card">
+                <div class="card-header">
+                  <p class="text-muted mb-0">Pilih Tanggal Pembelian</p>
+                </div>
+                <!--end card-header-->
+                <div class="card-body">
+                  <label class="my-3" for="tanggal_beli_barang">Tanggal Pembelian</label>
+                  <div class="input-group" name="tanggal_beli_barang" id="tanggal_beli_barang">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="birthday"
+                      value="10/10/2003"
+                    />
+                    <div class="input-group-append">
+                      <span class="input-group-text"
+                        ><i class="dripicons-calendar"></i
+                      ></span>
+                    </div>
+                  </div>
+                  <label class="my-3" for="masa_garansi_barang">Masa Garansi</label>
+                  
+                      <select
+                        class="select2 form-control mb-3 custom-select"
+                        style="width: 100%; height: 36px" name="masa_garansi_barang" id="masa_garansi_barang"
+                      >
+                        <option>Select</option>
+                          <option value="3bln">3 Bulan</option>
+                          <option value="6bln">6 Bulan</option>
+                          <option value="1yrs">1 Tahun</option>
+                          <option value="2yrs">2 Tahun</option>
+                      </select>
+                    </div>
+                </div>
+                <!--end card-body-->
+              </div>
+              <!--end card-->
+            </div>
+            <!--end col-->
+            
           </div>
           <!--end row 2-->
 
           <!--end col-->
+         
+          <!--UpGambar-->
+          <!--
           <div class="row">
             <div class="col-xl-6">
               <div class="card">
                 <div class="card-header">
                   <h4 class="card-title">File Upload 3</h4>
                 </div>
-                <!--end card-header-->
+                
                 <div class="card-body">
                   <input
                     type="file"
@@ -227,17 +232,17 @@
                     data-height="500"
                   />
                 </div>
-                <!--end card-body-->
+                
               </div>
-              <!--end card-->
+          
             </div>
-            <!--end col-->
+            
             <div class="col-xl-6">
               <div class="card">
                 <div class="card-header">
                   <h4 class="card-title">File Upload 4</h4>
                 </div>
-                <!--end card-header-->
+              
                 <div class="card-body">
                   <input
                     type="file"
@@ -247,10 +252,10 @@
                     data-default-file="assets/plugins/dropify/images/2.jpg"
                   />
                 </div>
-                <!--end card-body-->
+              
               </div>
-              <!--end card-->
             </div>
+              -->
             
             
 
@@ -265,9 +270,11 @@
 
             <!--end col-->
           </div>
+          
         </div>
         <!-- container -->
       </div>
+      </form>
       <!-- end page content -->
     </div>
     <!-- end page-wrapper -->

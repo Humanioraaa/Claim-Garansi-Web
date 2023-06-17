@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('jenis_barang');
             $table->string('harga_barang');
             $table->integer('jumlah_barang');
-            $table->date('tanggal_beli_barang');
+            $table->date('tanggal_beli_barang')->default(\Carbon\Carbon::now());
             $table->string('masa_garansi_barang');
             $table->unsignedBigInteger('user_id');
 

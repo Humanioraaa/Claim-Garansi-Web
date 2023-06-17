@@ -9,10 +9,17 @@ class Barang extends Model
 {
     use HasFactory;
 
+    public function setTanggalBeliBarangAttribute($value)
+        {
+            $this->attributes['tanggal_beli_barang'] = \Carbon\Carbon::createFromFormat('d-m-Y', $value)->format('Y-m-d');
+        }
+
+
     protected $table = 'barang';
     protected $primaryKey = 'id_barang';
 
     protected $fillable = [
+        
         'merk_barang',
         'jenis_barang',
         'harga_barang',

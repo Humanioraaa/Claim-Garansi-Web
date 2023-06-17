@@ -1,8 +1,10 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\RoleManager;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\barangController;
 use App\Http\Controllers\ManagerController;
 use App\Http\Controllers\AdminGaransi_Controller;
@@ -19,6 +21,20 @@ use App\Http\Controllers\AdministratorController;
 */
 
 //landing Page
+
+Route::get('/test-database-connection', function () {
+    try {
+        $results = DB::select('SELECT * FROM barang');
+        // If the query runs successfully, it means the database connection is working.
+        // You can also perform other operations on the $results if needed.
+
+        dd($results); // Dump and display the query results
+    } catch (Exception $e) {
+        // If an exception occurs, it means there is an issue with the database connection.
+        dd($e->getMessage()); // Dump and display the error message
+    }
+});
+
 
 
 
@@ -44,7 +60,6 @@ use App\Http\Controllers\AdministratorController;
 
 
 
-    Route::get('/input', [barangController::class, 'store']);
 
 
 
@@ -72,20 +87,12 @@ Route::get('/3_administrator_dashboard', [AdministratorController::class, 'index
 
 //User
 
-Route::get('/service', [UserController::class, 'index']);
+Route::get('/4_user_service', [UserController::class, 'index']);
 
 
-Route::get('/service', function() {
-    return view('4_user_service');
-})->middleware('useronly');
 
 
-Route::get('/upload', function() {
-    return view('4_user_upload');
-})->middleware('useronly');
-Route::post('/upload', function() {
-    return view('4_user_upload');
-})->middleware('useronly');
+
 
 Route::get('/riwayat', function() {
     return view('4_user_riwayat');
@@ -109,8 +116,14 @@ Route::get('/about', function() {
 })->middleware('useronly');
 
 
-Route::get('/barang', [barangController::class, 'add']);
-Route::post('/barang', [barangController::class, 'store']);
+
+// Route::get('/4_user_upload', [barangController::class, 'add']);
+// Route::post('/4_user_upload', [barangController::class, 'store']);
+
+
+Route::get('/4_user_upload', [barangController::class, 'add']);
+Route::post('/4_user_upload', [barangController::class, 'store']);
+
 
 
 

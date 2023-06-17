@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Dastyle - Admin & Dashboard Template</title>
+    <title>Claim Garansi</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -15,7 +15,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <!-- App favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+    <!-- <link rel="shortcut icon" href="assets/images/favicon.ico" /> -->
 
     <link href="assets/plugins/dropify/css/dropify.min.css" rel="stylesheet" />
 
@@ -62,8 +62,8 @@
       <!-- Top Bar End -->
 
       <!-- Page Content-->
-      <form action="barang" metod="post">
-        @csrf
+      <form action="/4_user_upload" method="post">
+      @csrf
       <div class="page-content">
         <div class="container-fluid">
           <!-- Page-Title -->
@@ -75,7 +75,7 @@
               <div class="card">
                 <div class="card-header">
                   <h4 class="card-title">Kategori</h4>
-                  <p class="text-muted mb-0">blablablabalbala al</p>
+                  <p class="text-muted mb-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor</p>
                 </div>
                 <!--end card-header-->
                 <div class="card-body bootstrap-select-1">
@@ -84,7 +84,7 @@
                     <label class="mb-3" for="jenis_barang">Jenis</label>
                       <select
                         class="select2 form-control mb-3 custom-select"
-                        style="width: 100%; height: 36px" name="jenis_barang" id="jenis_barang"
+                        style="width: 100%; height: 36px" name="jenis_barang" id="jenis_barang" required
                       >
                         <option>Select</option>
                           <option value="laptop">Laptop</option>
@@ -100,7 +100,7 @@
                     <label class="mb-3" for="merk_barang">Merk</label>
                       <select
                         class="select2 form-control mb-3 custom-select"
-                        style="width: 100%; height: 36px" name="merk_barang" id="merk_barang"
+                        style="width: 100%; height: 36px" name="merk_barang" id="merk_barang" required
                       >
                         <option>Select</option>
                        
@@ -159,10 +159,10 @@
                   <input type="hidden" name="user_id" value="{{ $users->id }}">
                       
                   <label class="mb-3" for="jumlah_barang">Jumlah Barang</label>
-                      <input type="number" class="form-control" maxlength="25" name="jumlah_barang" id="jumlah_barang" /> 
+                      <input type="number" class="form-control" maxlength="25" name="jumlah_barang" id="jumlah_barang" required /> 
                       
                       <label class="mb-3" for="harga_barang">harga Barang</label>
-                      <input type="number" class="form-control" maxlength="25" name="harga_barang" id="harga_barang" /> 
+                      <input type="number" class="form-control" maxlength="25" name="harga_barang" id="harga_barang" required/> 
                 </div>
               </div>
               
@@ -177,12 +177,11 @@
                 <!--end card-header-->
                 <div class="card-body">
                   <label class="my-3" for="tanggal_beli_barang">Tanggal Pembelian</label>
-                  <div class="input-group" name="tanggal_beli_barang" id="tanggal_beli_barang">
+                  <div class="input-group" >
                     <input
-                      type="text"
+                      type="date"
                       class="form-control"
-                      name="birthday"
-                      value="10/10/2003"
+                       name="tanggal_beli_barang" id="tanggal_beli_barang" required
                     />
                     <div class="input-group-append">
                       <span class="input-group-text"
@@ -194,7 +193,7 @@
                   
                       <select
                         class="select2 form-control mb-3 custom-select"
-                        style="width: 100%; height: 36px" name="masa_garansi_barang" id="masa_garansi_barang"
+                        style="width: 100%; height: 36px" name="masa_garansi_barang" id="masa_garansi_barang" required
                       >
                         <option>Select</option>
                           <option value="3bln">3 Bulan</option>
@@ -216,9 +215,9 @@
           <!--end col-->
          
           <!--UpGambar-->
-          <!--
+          
           <div class="row">
-            <div class="col-xl-6">
+            <!-- <div class="col-xl">
               <div class="card">
                 <div class="card-header">
                   <h4 class="card-title">File Upload 3</h4>
@@ -227,7 +226,8 @@
                 <div class="card-body">
                   <input
                     type="file"
-                    id="input-file-now-custom-2"
+                    id="image"
+                    name="image"
                     class="dropify"
                     data-height="500"
                   />
@@ -235,41 +235,23 @@
                 
               </div>
           
-            </div>
-            
-            <div class="col-xl-6">
-              <div class="card">
-                <div class="card-header">
-                  <h4 class="card-title">File Upload 4</h4>
-                </div>
-              
-                <div class="card-body">
-                  <input
-                    type="file"
-                    id="input-file-now-custom-3"
-                    class="dropify"
-                    data-height="500"
-                    data-default-file="assets/plugins/dropify/images/2.jpg"
-                  />
-                </div>
-              
-              </div>
-            </div>
-              -->
-            
-            
+            </div> -->
 
-            <div class="col-xl-6">
+
+          
+
+            <!--end col-->
+          </div>
+
+          <div class="col-xl">
               <div class="card">
-                
-              <button class="btn btn-primary waves-effect waves-light"> Submit </button>
+
+                <input type="submit" class="btn btn-primary waves-effect waves-light">
+        
                 <!--end card-body-->
               </div>
               <!--end card-->
             </div>
-
-            <!--end col-->
-          </div>
           
         </div>
         <!-- container -->

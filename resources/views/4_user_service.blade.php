@@ -3,16 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Quitox Software & IT Solutions HTML Template</title>
+    <title>Claim Garansi</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Place favicon.ico in the root directory -->
-    <link
+    <!-- <link
       rel="shortcut icon"
       type="image/x-icon"
       href="assets/img/favicon.png"
-    />
+    /> -->
 
     <!-- CSS here -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
@@ -55,9 +55,9 @@
           <div class="row align-items-center">
             <div class="col-xl-2 col-lg-2 col-md-6 col-7">
               <div class="tp-header__logo">
-                <a href="index.html">
+                <!-- <a href="index.html">
                   <img src="assets/img/logo/logo-black.png" alt="" />
-                </a>
+                </a> -->
               </div>
             </div>
             <div class="col-xl-7 col-lg-7 d-none d-lg-block">
@@ -74,7 +74,7 @@
                       <ul class="submenu">
                         <li><a href="service.html">Service</a></li>
                         <li>
-                          <a href="service-details.html">Service Details</a>
+                          <a href="#">Service Details</a>
                         </li>
                         <li><a href="faq.html">Faq</a></li>
                         <li><a href="login.html">Login</a></li>
@@ -112,7 +112,7 @@
       <!-- breadcrumb area start -->
       <div
         class="breadcrumb__area breadcrumb-height p-relative grey-bg"
-        data-background="assets/img/breadcrumb/breadcrumb.jpg"
+        data-background=""
       >
         <div class="breadcrumb__scroll-bottom smooth">
           <a href="#tp-service__area">
@@ -153,17 +153,15 @@
                 </div>
                 <div class="tp-service__content">
                   <h4 class="tp-service__title-sm">
-                    <a href="/upload"
+                    <a href="/4_user_upload"
                       >Pengajuan Garansi</a
                     >
                   </h4>
                   <p>
-                    Quitox is the best quaint james victoria sponge happy days
-                    cras.Quitox is the best of the seen.
-                  </p>
+                  Pengajuan Garansi</p>
                 </div>
                 <div class="tp-service__link">
-                  <a href="/upload">
+                  <a href="/4_user_upload">
                     <svg
                       width="39"
                       height="16"
@@ -196,8 +194,7 @@
                     <a href="/statuspage">Status Pengajuan Garansi</a>
                   </h4>
                   <p>
-                    alsdkjhafshdkaaaaaaaaaaaaaaaaaaaaasjjjjjjjjjj
-                  </p>
+                  Status Pengajuan Garansi</p>
                 </div>
                 <div class="tp-service__link">
                   <a href="/statuspage">
@@ -233,9 +230,7 @@
                     <a href="/riwayat">Riwayat</a>
                   </h4>
                   <p>
-                    Quitox is the best quaint james victoria sponge happy days
-                    cras.Quitox is the best of the seen.
-                  </p>
+                  Riwayat</p>
                 </div>
                 <div class="tp-service__link">
                   <a href="/riwayat">
@@ -271,9 +266,7 @@
                     <a href="/contact">Contact</a>
                   </h4>
                   <p>
-                    Quitox is the best quaint james victoria sponge happy days
-                    cras.Quitox is the best of the seen.
-                  </p>
+                  Contact</p>
                 </div>
                 <div class="tp-service__link">
                   <a href="/contact">
@@ -309,9 +302,7 @@
                     <a href="/faq">FAQ</a>
                   </h4>
                   <p>
-                    Quitox is the best quaint james victoria sponge happy days
-                    cras.Quitox is the best of the seen.
-                  </p>
+                  FAQ</p>
                 </div>
                 <div class="tp-service__link">
                   <a href="/faq">
@@ -347,9 +338,7 @@
                     <a href="/about">About</a>
                   </h4>
                   <p>
-                    Quitox is the best quaint james victoria sponge happy days
-                    cras.Quitox is the best of the seen.
-                  </p>
+                  About</p>
                 </div>
                 <div class="tp-service__link">
                   <a href="/about">

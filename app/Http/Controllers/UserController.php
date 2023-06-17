@@ -9,6 +9,6 @@ class UserController extends Controller
     public function index(Request $request)
     {
 
-        return view('service');
+        return view('4_user_service');
     }
 }

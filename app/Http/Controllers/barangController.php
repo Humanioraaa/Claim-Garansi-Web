@@ -10,7 +10,12 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 
 class barangController extends Controller
-{
+{   
+    public function tampil(){
+        $barang=Barang::all();
+
+        return view('3_administrator_approving', compact('barang'));
+    }
     public function add()
     {
         $barang = Barang::all();
@@ -32,24 +37,27 @@ class barangController extends Controller
         //     'masa_garansibarang' => 'required',
         //     'user_id' => 'required',
         // ])->validate();
-        // $newName = '';
-        // if($request->file('image')) {
-        //     $extension = $request->file('image')->getClientOriginalExtension();
-        //     $newName = $request->name.'-'.now()->timestamp.'.'.$extension;
-        //     $request->file('image')->storeAs('struk', $newName);
-        // }
-        // $request['struk'] = $newName;
+        
+        $newName = '';
+        if($request->file('image')) {
+            $extension = $request->file('image')->getClientOriginalExtension();
+            $newName = $request->jenis_barang.'-'.now()->timestamp.'.'.$extension;
+            $request->file('image')->storeAs('struk', $newName);
+        }
+        $request['struk'] = $newName;
+        
+        $request['status']='pending';
+        $barang = Barang::create($request->all());
+        // $barang = new Barang;
        
-        $barang = new Barang;
-        $barang->merk_barang = $request->merk_barang;
-        $barang->jenis_barang = $request->jenis_barang;
-        $barang->harga_barang = $request->harga_barang;
-        $barang->jumlah_barang = $request->jumlah_barang;
-        $barang->tanggal_beli_barang = $request->tanggal_beli_barang;
-        $barang->masa_garansi_barang = $request->masa_garansi_barang;
-        // $barang->struk = $newName;
+        // $barang->merk_barang = $request->merk_barang;
+        // $barang->jenis_barang = $request->jenis_barang;
+        // $barang->harga_barang = $request->harga_barang;
+        // $barang->jumlah_barang = $request->jumlah_barang;
+        // $barang->masa_garansi_barang = $request->masa_garansi_barang;
+        // $barang->tanggal_beli_barang = $request->tanggal_beli_barang;
         $barang->user_id = $request->user_id;
-        $barang->save();
+        // $barang->save();
     
         return redirect('/4_user_service')->with('success', 'Success');
     }

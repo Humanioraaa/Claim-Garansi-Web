@@ -7,6 +7,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\barangController;
 use App\Http\Controllers\ManagerController;
+use App\Http\Controllers\ApprovelController;
 use App\Http\Controllers\AdminGaransi_Controller;
 use App\Http\Controllers\AdministratorController;
 /*
@@ -37,7 +38,13 @@ Route::get('/test-database-connection', function () {
 
 
 
+Route::get('/home', function() {
+    return view('landing_page');
+});
 
+Route::get('/kontol', function() {
+    return view('helpdesk-index');
+});
 
 
 
@@ -55,7 +62,8 @@ Route::get('/test-database-connection', function () {
     
     Route::get('/register', [AuthController::class, 'register'])->name('register');
     Route::post('/register', [AuthController::class, 'store']);
-    
+    Route::get('/logout', [AuthController::class, 'logout'])->middleware('auth');
+
 
 
 
@@ -83,11 +91,28 @@ Route::get('/2_admingaransi_dashboard', [AdminGaransi_Controller::class, 'index'
 
 //Administrator
 Route::get('/3_administrator_dashboard', [AdministratorController::class, 'index'])->middleware('administratoronly');
+Route::get('/penugasan', function() {
+    return view('3_administrator_penugasan');   
+});
 
+Route::get('/3_administrator_approving', [barangController::class, 'tampil'])->middleware('administratoronly')->name('barangindex');
+Route::post('/3_administrator_approving/{barang}', [ApprovelController::class, 'ngeapprove'])->middleware('administratoronly')->name('barangapproved');
+
+Route::get('/menugaskan', function() {
+    return view('3_administrator_form_menugaskan');
+});
+
+Route::get('/tugas', function() {
+    return view('3_administrator_penugasan');
+});
 
 //User
+Route::get('/service', function() {
+    return view('4_user_service');
+})->middleware('useronly');
 
-Route::get('/4_user_service', [UserController::class, 'index']);
+
+Route::get('/4_user_service', [UserController::class, 'index'])->middleware('useronly');
 
 
 

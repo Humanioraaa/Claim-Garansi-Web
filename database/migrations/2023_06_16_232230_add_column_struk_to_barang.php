@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::table('barang', function (Blueprint $table) {
             $table->string('struk')->after('user_id');
+            $table->string('status')->after('struk');
         });
     }
 
@@ -24,6 +25,13 @@ return new class extends Migration
         Schema::table('barang', function (Blueprint $table) {
             if (Schema::hasColumn('barang', 'struk')){
                 $table->dropColumn('struk');
+                $table->dropColumn('status');
+            }
+        });
+
+        Schema::table('barang', function (Blueprint $table) {
+            if (Schema::hasColumn('barang', 'status')){
+                $table->dropColumn('status');
             }
         });
     }

@@ -62,7 +62,7 @@
       <!-- Top Bar End -->
 
       <!-- Page Content-->
-      <form action="/4_user_upload" method="post">
+      <form action="/4_user_upload" method="post" enctype="multipart/form-data">
       @csrf
       <div class="page-content">
         <div class="container-fluid">
@@ -217,7 +217,7 @@
           <!--UpGambar-->
           
           <div class="row">
-            <!-- <div class="col-xl">
+            <div class="col-xl">
               <div class="card">
                 <div class="card-header">
                   <h4 class="card-title">File Upload 3</h4>
@@ -235,13 +235,11 @@
                 
               </div>
           
-            </div> -->
+            </div>
 
-
-          
-
-            <!--end col-->
+            <!-- end col -->
           </div>
+
 
           <div class="col-xl">
               <div class="card">

@@ -19,11 +19,11 @@ class Barang extends Model
 
 
 
-    protected $primaryKey = 'id_barang';
+    protected $primaryKey = 'id';
 
     protected $fillable = ['merk_barang', 
     'jenis_barang', 'harga_barang', 'jumlah_barang', 
-    'tanggal_beli_barang', 'masa_garansi_barang', 'user_id'];
+    'tanggal_beli_barang', 'masa_garansi_barang', 'struk','user_id', 'status'];
 
 
     public function User()

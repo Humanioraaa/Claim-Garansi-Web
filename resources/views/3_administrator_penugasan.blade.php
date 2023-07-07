@@ -1182,34 +1182,26 @@
                                         <thead>
                                             <tr>
                                                 <th>Nama Admin Garansi</th>
-                                                <th>Barang Yang Dikerjakan</th>
-                                                <th>Status Pengerjaan</th>
-                                                <th>Dikerjakan Sejak</th>
+                                           
                                                 <th>Status</th>
-                                                <th>id Barang</th>
+                                           
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
+                                        @foreach($users as $admin)
                                             <tr>
+                                            <td>{{ $admin->name }}</td>
                                                 <td>
-                                                   
-                                                    <span>Yantop</span>
+                                                @if ($admin->status=== 'Available')    
+                                                <span class="badge badge-soft-success">{{ $admin->status }}</span>
+                                                @elseif ($admin->status==='Unavailable')
+                                                <span class="badge badge-soft-danger">{{ $admin->status }}</span>
+                                                @endif
                                                 </td>
-                                                <td>Laptop</td>
-                                                <td>Diproses</td>
-                                                <td>20-9-2023</td>
+                                               
                                                 <td>
-                                                    <span
-                                                        class="badge badge-soft-warning"
-                                                        >Unavailable</span
-                                                    >
-                                                </td>
-                                                <td>
-                                                    <span>010203</span>
-                                                </td>
-                                                <td>
-                                                    <a href="menugaskan" class="mr-2"
+                                                    <a href="{{ route('tugaskan', ['users' => $admin->id]) }}" class="mr-2"
                                                         ><i
                                                             class="las la-pen text-info font-18"
                                                         ></i
@@ -1217,34 +1209,7 @@
                                                   
                                                 </td>
                                             </tr>
-
-                                            <tr>
-                                                <td>
-                                                   
-                                                    <span>Yantop2</span>
-                                                </td>
-                                                <td>-</td>
-                                                <td>-</td>
-                                                <td>-</td>
-                                                <td>
-                                                    <span
-                                                        class="badge badge-soft-success"
-                                                        >Available</span
-                                                    >
-                                                </td>
-                                                <td>
-                                                    <span>-</span>
-                                                </td>
-                                                <td>
-                                                    <a href="menugaskan" class="mr-2"
-                                                        ><i
-                                                            class="las la-pen text-info font-18"
-                                                        ></i
-                                                    ></a>
-                                                   
-                                                </td>
-                                            </tr>
-
+                                            @endforeach 
                                         </tbody>
                                     </table>
                                 </div>

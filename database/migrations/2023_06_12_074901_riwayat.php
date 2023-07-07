@@ -16,10 +16,8 @@ return new class extends Migration
             $table->date('tanggal');
             $table->string('merk_barang');
             $table->integer('jumlah');
-            $table->unsignedBigInteger('id_komplain');
             $table->unsignedBigInteger('id_user');
 
-            $table->foreign('id_komplain')->references('id')->on('komplain')->onDelete('cascade');
             $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
 
             $table->timestamps();

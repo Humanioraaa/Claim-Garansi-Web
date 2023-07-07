@@ -14,4 +14,11 @@ class ApprovelController extends Controller
         return redirect()->route('barangindex');
     }
 
+    public function ngereject(Barang $barang) {
+        $barang->status = 'rejected';
+        $barang->save();
+
+        return redirect()->route('barangindex');
+    }
+
 }

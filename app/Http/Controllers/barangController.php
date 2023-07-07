@@ -10,11 +10,16 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 
 class barangController extends Controller
-{   
+{
     public function tampil(){
         $barang=Barang::all();
 
         return view('3_administrator_approving', compact('barang'));
+    }
+    public function tugas(){
+        $barang=Barang::all()->where('status', 'approved');
+
+        return view('3_administrator_form_menugaskan', compact('barang'));
     }
     public function add()
     {
@@ -37,7 +42,7 @@ class barangController extends Controller
         //     'masa_garansibarang' => 'required',
         //     'user_id' => 'required',
         // ])->validate();
-        
+
         $newName = '';
         if($request->file('image')) {
             $extension = $request->file('image')->getClientOriginalExtension();
@@ -45,11 +50,11 @@ class barangController extends Controller
             $request->file('image')->storeAs('struk', $newName);
         }
         $request['struk'] = $newName;
-        
+
         $request['status']='pending';
         $barang = Barang::create($request->all());
         // $barang = new Barang;
-       
+
         // $barang->merk_barang = $request->merk_barang;
         // $barang->jenis_barang = $request->jenis_barang;
         // $barang->harga_barang = $request->harga_barang;
@@ -58,10 +63,10 @@ class barangController extends Controller
         // $barang->tanggal_beli_barang = $request->tanggal_beli_barang;
         $barang->user_id = $request->user_id;
         // $barang->save();
-    
+
         return redirect('/4_user_service')->with('success', 'Success');
     }
-    
 
-    
+
+
 }

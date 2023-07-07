@@ -15,9 +15,18 @@ class Penugasan extends Model
     protected $fillable = [
         'tanggal_awal',
         'tanggal_selesai',
-        'id_komplain',
-        'id_admin_garansi',
-        'id_administrator',
-        
+        'id_user',
+        'id_barang'
     ];
+
+    public function Administrator()
+    {
+        return $this->belongsTo(User::class, 'id_administrator');
+    }
+
+    public function Admin_Garansi()
+    {
+        return $this->belongsTo(User::class, 'id_admin_garansi');
+    }
+
 }

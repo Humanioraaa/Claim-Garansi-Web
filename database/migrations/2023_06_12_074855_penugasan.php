@@ -13,15 +13,12 @@ return new class extends Migration
     {
         Schema::create('penugasan', function (Blueprint $table) {
             $table->id();
-            $table->date('tanggal_awal');
-            $table->date('tanggal_selesai');
-            $table->unsignedBigInteger('id_komplain');
-            $table->unsignedBigInteger('id_admin_garansi');
-            $table->unsignedBigInteger('id_administrator');
+            $table->date('tanggal_selesai')->nullable();
+            $table->unsignedBigInteger('id_user');
+            $table->unsignedBigInteger('id_barang');
 
-            $table->foreign('id_komplain')->references('id')->on('komplain')->onDelete('cascade');
-            $table->foreign('id_admin_garansi')->references('id')->on('admin_garansi')->onDelete('cascade');
-            $table->foreign('id_administrator')->references('id')->on('administrator')->onDelete('cascade');
+            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('id_barang')->references('id')->on('barang')->onDelete('cascade');
 
             $table->timestamps();
         });

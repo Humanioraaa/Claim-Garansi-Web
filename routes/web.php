@@ -59,7 +59,7 @@ Route::get('/kontol', function() {
     // login register
     Route::get('/login', [AuthController::class, 'login'])->name('login');
     Route::post('/login', [AuthController::class, 'authenticate']);
-    
+
     Route::get('/register', [AuthController::class, 'register'])->name('register');
     Route::post('/register', [AuthController::class, 'store']);
     Route::get('/logout', [AuthController::class, 'logout'])->middleware('auth');
@@ -92,20 +92,21 @@ Route::get('/2_admingaransi_dashboard', [AdminGaransi_Controller::class, 'index'
 //Administrator
 Route::get('/3_administrator_dashboard', [AdministratorController::class, 'index'])->middleware('administratoronly');
 Route::get('/penugasan', function() {
-    return view('3_administrator_penugasan');   
-});
-
-Route::get('/3_administrator_approving', [barangController::class, 'tampil'])->middleware('administratoronly')->name('barangindex');
-Route::post('/3_administrator_approving/{barang}', [ApprovelController::class, 'ngeapprove'])->middleware('administratoronly')->name('barangapproved');
-
-Route::get('/menugaskan', function() {
-    return view('3_administrator_form_menugaskan');
-});
-
-Route::get('/tugas', function() {
     return view('3_administrator_penugasan');
 });
 
+Route::get('/3_administrator_approving', [barangController::class, 'tampil'])->middleware('administratoronly')->name('barangindex');
+Route::get('/3_administrator_approving/{barang}/approve', [ApprovelController::class, 'ngeapprove'])->middleware('administratoronly')->name('barangapproved');
+Route::get('/3_administrator_approving/{barang}/reject', [ApprovelController::class, 'ngereject'])->middleware('administratoronly')->name('barangreject');
+
+
+Route::get('/3_administrator_form_menugaskan', [barangController::class, 'tugas'])->middleware('administratoronly')->name('tugaskan');
+Route::get('/3_administrator_penugasan', [AdministratorController::class, 'index'])->middleware('administratoronly')->name('nunjuk');
+Route::get('/3_administrator_penugasan/{users}', [AdministratorController::class, 'index'])->middleware('administratoronly')->name('nunjuk');
+Route::get('/3_administrator_penugasan/tugaskan', [AdministratorController::class, 'assign'])->middleware('administratoronly')->name('assign');
+
+Route::get('/test/{id}', [AdministratorController::class, 'test'])->middleware('administratoronly')->name('test');
+Route::post('/test/{id}', [AdministratorController::class, 'tunjuk'])->middleware('administratoronly')->name('tunjuk');
 //User
 Route::get('/service', function() {
     return view('4_user_service');

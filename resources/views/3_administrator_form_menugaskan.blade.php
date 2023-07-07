@@ -356,7 +356,6 @@
                                 </a>
                             </div>
                         </li>
-
                         <li class="dropdown">
                             <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button"
                                 aria-haspopup="false" aria-expanded="false">
@@ -436,50 +435,45 @@
                                         <table class="table table-bordered mb-0 table-centered">
                                             <thead>
                                             <tr>
-                                                <th>Transaction ID</th>
+                                            <th>Transaction ID</th>
+                                                <th>User Id</th>
                                                 <th>Merk</th>
                                                 <th>Jenis</th>
+                                                <th>harga</th>
                                                 <th>Jumlah</th>
+                                                <th>tanggal Beli Barang</th>
+                                                <th>Masa Garansi</th>
+                                                <th>Struk</th>
+                                                <th>status</th>
+                                                <th>tanggal Komplain</th>
                                                 <th class="text-right">Action</th>
                                             </tr>
                                             </thead>
                                             <tbody>
+                                            @foreach($barang as $nampil)
                                             <tr>
-                                                <td>#124781</td>
-                                                <td>25/11/2018</td>
-                                                <td>$321</td>
-                                                <td><span class="badge badge-soft-success">Approved</span></td>
+                                            <td>{{ $nampil->id }}</td>
+                                                <td>{{ $nampil->user_id }}</td>
+                                                <td>{{ $nampil->merk_barang }}</td>
+                                                <td>{{ $nampil->jenis_barang }}</td>
+                                                <td>{{ $nampil->harga_barang }}</td>
+                                                <td>{{ $nampil->jumlah_barang }}</td>
+                                                <td>{{ $nampil->tanggal_beli_barang }}</td>
+                                                <td>{{ $nampil->masa_garansi_barang }}</td>
+                                                <td>{{ $nampil->struk }}</td>
+                                                <td>
+                                                <span class="badge badge-soft-success">{{ $nampil->status }}</span>
+                                                </td>
+                                                <td>{{ $nampil->created_at }}</td>
                                                 <td class="text-right">
-                                                <button class="btn btn-primary" type="submit" onclick="window.location.href='penugasan'">Tugaskan</button>
+                                                <a href="{{ route('assign') }}">
+                                                                <button type="button" class="btn btn-action btn-primary mb-0 me-2" title="Approve this booking">
+                                                                    <i class="fas fa-check"></i>
+                                                                </button>
+                                                </a>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td>#542136</td>
-                                                <td>19/11/2018</td>
-                                                <td>$227</td>
-                                                <td><span class="badge badge-soft-success">Approved</span></td>
-                                                <td class="text-right">
-                                                <button class="btn btn-primary" type="submit" onclick="window.location.href='penugasan'">Tugaskan</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>#234578</td>
-                                                <td>11/10/2018</td>
-                                                <td>$442</td>
-                                                <td><span class="badge badge-soft-danger">Rejected</span></td>
-                                                <td class="text-right">
-                                                <button class="btn btn-primary" type="submit" onclick="window.location.href='penugasan'">Tugaskan</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>#951357</td>
-                                                <td>03/12/2018</td>
-                                                <td>$625</td>
-                                                <td><span class="badge badge-soft-success">Approved</span></td>
-                                                <td class="text-right">
-                                                <button class="btn btn-primary" type="submit" onclick="window.location.href='penugasan'">Tugaskan</button>
-                                                </td>
-                                            </tr>
+                                            @endforeach
                                             </tbody>
                                         </table><!--end /table-->
                                     </div><!--end /tableresponsive-->
@@ -487,17 +481,7 @@
                             </div><!--end card-->
                         </div> <!-- end col -->
                     </div> <!-- end row -->
-    
-    
-                    
-                    
-   
-
                 </div><!-- container -->
-
-                <footer class="footer text-center text-sm-left">
-                    &copy; 2020 Dastyle <span class="d-none d-sm-inline-block float-right">Crafted with <i class="mdi mdi-heart text-danger"></i> by Mannatthemes</span>
-                </footer><!--end footer-->
             </div>
             <!-- end page content -->
         </div>

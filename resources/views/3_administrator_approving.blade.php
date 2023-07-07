@@ -48,10 +48,10 @@
                             <li class="nav-item"><a class="nav-link" href="index.html"><i class="ti-control-record"></i>Analytics</a></li>
                             <li class="nav-item"><a class="nav-link" href="crm-index.html"><i class="ti-control-record"></i>CRM</a></li>
                             <li class="nav-item"><a class="nav-link" href="helpdesk-index.html"><i class="ti-control-record"></i>Helpdesk</a></li>
-                            <li class="nav-item"><a class="nav-link" href="sales-index.html"><i class="ti-control-record"></i>Sales</a></li> 
+                            <li class="nav-item"><a class="nav-link" href="sales-index.html"><i class="ti-control-record"></i>Sales</a></li>
                         </ul>
                     </li>
-    
+
                     <li>
                         <a href="javascript: void(0);"><i data-feather="grid" class="align-self-center menu-icon"></i><span>Apps</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
                         <ul class="nav-second-level" aria-expanded="false">
@@ -61,7 +61,7 @@
                                     <li><a href="apps-email-inbox.html">Inbox</a></li>
                                     <li><a href="apps-email-read.html">Read Email</a></li>
                                 </ul>
-                            </li>  
+                            </li>
                             <li class="nav-item"><a class="nav-link" href="apps-chat.html"><i class="ti-control-record"></i>Chat</a></li>
                             <li class="nav-item"><a class="nav-link" href="apps-contact-list.html"><i class="ti-control-record"></i>Contact List</a></li>
                             <li class="nav-item"><a class="nav-link" href="apps-calendar.html"><i class="ti-control-record"></i>Calendar</a></li>
@@ -71,7 +71,7 @@
                             <li>
                                 <a href="javascript: void(0);"><i class="ti-control-record"></i>Projects <span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
                                 <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="apps-project-overview.html">Overview</a></li>                                    
+                                    <li><a href="apps-project-overview.html">Overview</a></li>
                                     <li><a href="apps-project-projects.html">Projects</a></li>
                                     <li><a href="apps-project-board.html">Board</a></li>
                                     <li><a href="apps-project-teams.html">Teams</a></li>
@@ -82,16 +82,16 @@
                             <li>
                                 <a href="javascript: void(0);"><i class="ti-control-record"></i>Ecommerce <span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
                                 <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="apps-ecommerce-products.html">Products</a></li>                                    
+                                    <li><a href="apps-ecommerce-products.html">Products</a></li>
                                     <li><a href="apps-ecommerce-product-list.html">Product List</a></li>
                                     <li><a href="apps-ecommerce-product-detail.html">Product Detail</a></li>
                                     <li><a href="apps-ecommerce-cart.html">Cart</a></li>
-                                    <li><a href="apps-ecommerce-checkout.html">Checkout</a></li>                                    
+                                    <li><a href="apps-ecommerce-checkout.html">Checkout</a></li>
                                 </ul>
                             </li>
                         </ul>
-                    </li> 
-    
+                    </li>
+
                     <li>
                         <a href="javascript: void(0);"><i data-feather="lock" class="align-self-center menu-icon"></i><span>Authentication</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
                         <ul class="nav-second-level" aria-expanded="false">
@@ -102,18 +102,18 @@
                             <li class="nav-item"><a class="nav-link" href="auth-404.html"><i class="ti-control-record"></i>Error 404</a></li>
                             <li class="nav-item"><a class="nav-link" href="auth-500.html"><i class="ti-control-record"></i>Error 500</a></li>
                         </ul>
-                    </li> 
-    
+                    </li>
+
                     <hr class="hr-dashed hr-menu">
                     <li class="menu-label my-2">Components & Extra</li>
-    
+
                     <li>
                         <a href="javascript: void(0);"><i data-feather="box" class="align-self-center menu-icon"></i><span>UI Kit</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
                         <ul class="nav-second-level" aria-expanded="false">
                             <li>
                                 <a href="javascript: void(0);"><i class="ti-control-record"></i>UI Elements <span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
                                 <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="ui-alerts.html">Alerts</a></li>                                    
+                                    <li><a href="ui-alerts.html">Alerts</a></li>
                                     <li><a href="ui-avatar.html">Avatar</a></li>
                                     <li><a href="ui-buttons.html">Buttons</a></li>
                                     <li><a href="ui-badges.html">Badges</a></li>
@@ -121,14 +121,14 @@
                                     <li><a href="ui-carousels.html">Carousels</a></li>
                                     <li><a href="ui-check-radio.html"><span>Check & Radio</span></a></li>
                                     <li><a href="ui-dropdowns.html">Dropdowns</a></li>
-                                    <li><a href="ui-grids.html">Grids</a></li> 
+                                    <li><a href="ui-grids.html">Grids</a></li>
                                     <li><a href="ui-images.html">Images</a></li>
-                                    <li><a href="ui-list.html">List</a></li>                                   
+                                    <li><a href="ui-list.html">List</a></li>
                                     <li><a href="ui-modals.html">Modals</a></li>
                                     <li><a href="ui-navs.html">Navs</a></li>
-                                    <li><a href="ui-navbar.html">Navbar</a></li> 
-                                    <li><a href="ui-paginations.html">Paginations</a></li>   
-                                    <li><a href="ui-popover-tooltips.html">Popover & Tooltips</a></li>                                
+                                    <li><a href="ui-navbar.html">Navbar</a></li>
+                                    <li><a href="ui-paginations.html">Paginations</a></li>
+                                    <li><a href="ui-popover-tooltips.html">Popover & Tooltips</a></li>
                                     <li><a href="ui-progress.html">Progress</a></li>
                                     <li><a href="ui-spinners.html">Spinners</a></li>
                                     <li><a href="ui-tabs-accordions.html">Tabs & Accordions</a></li>
@@ -136,7 +136,7 @@
                                     <li><a href="ui-typography.html">Typography</a></li>
                                     <li><a href="ui-videos.html">Videos</a></li>
                                 </ul>
-                            </li>  
+                            </li>
                             <li>
                                 <a href="javascript: void(0);"><i class="ti-control-record"></i>Advanced UI <span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
                                 <ul class="nav-second-level" aria-expanded="false">
@@ -145,15 +145,15 @@
                                     <li><a href="advanced-highlight.html">Highlight</a></li>
                                     <li><a href="advanced-idle-timer.html">Idle Timer</a></li>
                                     <li><a href="advanced-kanban.html">Kanban</a></li>
-                                    <li><a href="advanced-lightbox.html">Lightbox</a></li> 
+                                    <li><a href="advanced-lightbox.html">Lightbox</a></li>
                                     <li><a href="advanced-nestable.html">Nestable List</a></li>
                                     <li><a href="advanced-rangeslider.html">Range Slider</a></li>
                                     <li><a href="advanced-ratings.html">Ratings</a></li>
                                     <li><a href="advanced-ribbons.html">Ribbons</a></li>
                                     <li><a href="advanced-session.html">Session Timeout</a></li>
-                                    <li><a href="advanced-sweetalerts.html">Sweet Alerts</a></li>                                    
+                                    <li><a href="advanced-sweetalerts.html">Sweet Alerts</a></li>
                                 </ul>
-                            </li>  
+                            </li>
                             <li>
                                 <a href="javascript: void(0);"><i class="ti-control-record"></i>Forms <span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
                                 <ul class="nav-second-level" aria-expanded="false">
@@ -165,9 +165,9 @@
                                     <li><a href="forms-validation.html">Validation</a></li>
                                     <li><a href="forms-wizard.html">Wizard</a></li>
                                     <li><a href="forms-x-editable.html">X Editable</a></li>
-                                    
+
                                 </ul>
-                            </li>  
+                            </li>
                             <li>
                                 <a href="javascript: void(0);"><i class="ti-control-record"></i>Charts <span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
                                 <ul class="nav-second-level" aria-expanded="false">
@@ -176,7 +176,7 @@
                                     <li><a href="charts-flot.html">Flot</a></li>
                                     <li><a href="charts-morris.html">Morris</a></li>
                                 </ul>
-                            </li>  
+                            </li>
                             <li>
                                 <a href="javascript: void(0);"><i class="ti-control-record"></i>Tables <span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
                                 <ul class="nav-second-level" aria-expanded="false">
@@ -184,13 +184,13 @@
                                     <li><a href="tables-datatable.html">Datatables</a></li>
                                     <li><a href="tables-editable.html">Editable</a></li>
                                     <li><a href="tables-responsive.html">Responsive</a></li>
-                                    
+
                                 </ul>
-                            </li>  
+                            </li>
                             <li>
                                 <a href="javascript: void(0);"><i class="ti-control-record"></i>Icons <span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
                                 <ul class="nav-second-level" aria-expanded="false">
-                                    
+
                                     <li><a href="icons-dripicons.html">Dripicons</a></li>
                                     <li><a href="icons-feather.html">Feather</a></li>
                                     <li><a href="icons-fontawesome.html">Font awesome</a></li>
@@ -198,44 +198,44 @@
                                     <li><a href="icons-themify.html">Themify</a></li>
                                     <li><a href="icons-typicons.html">Typicons</a></li>
                                 </ul>
-                            </li>  
+                            </li>
                             <li>
                                 <a href="javascript: void(0);"><i class="ti-control-record"></i>Maps <span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li><a href="maps-google.html">Google Maps</a></li>
                                     <li><a href="maps-leaflet.html">Leaflet Maps</a></li>
-                                    <li><a href="maps-vector.html">Vector Maps</a></li>  
+                                    <li><a href="maps-vector.html">Vector Maps</a></li>
                                 </ul>
-                            </li>  
+                            </li>
                             <li>
                                 <a href="javascript: void(0);"><i class="ti-control-record"></i>Email Template <span class="menu-arrow left-has-menu"><i class="mdi mdi-chevron-right"></i></span></a>
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li><a href="email-templates-alert.html">Alert Email</a></li>
-                                    <li><a href="email-templates-basic.html">Basic Action Email</a></li>                                    
+                                    <li><a href="email-templates-basic.html">Basic Action Email</a></li>
                                     <li><a href="email-templates-billing.html">Billing Email</a></li>
                                 </ul>
-                            </li>   
-                        </ul>                        
+                            </li>
+                        </ul>
                     </li>
-    
+
                     <li>
                         <a href="widgets.html"><i data-feather="layers" class="align-self-center menu-icon"></i><span>Widgets</span><span class="badge badge-soft-success menu-arrow">New</span></a>
                     </li>
-    
+
                     <li>
                         <a href="javascript: void(0);"><i data-feather="file-plus" class="align-self-center menu-icon"></i><span>Pages</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
                         <ul class="nav-second-level" aria-expanded="false">
                             <li class="nav-item"><a class="nav-link" href="pages-blogs.html"><i class="ti-control-record"></i>Blogs</a></li>
                             <li class="nav-item"><a class="nav-link" href="pages-faqs.html"><i class="ti-control-record"></i>FAQs</a></li>
                             <li class="nav-item"><a class="nav-link" href="pages-pricing.html"><i class="ti-control-record"></i>Pricing</a></li>
-                            <li class="nav-item"><a class="nav-link" href="pages-profile.html"><i class="ti-control-record"></i>Profile</a></li>   
-                            <li class="nav-item"><a class="nav-link" href="pages-starter.html"><i class="ti-control-record"></i>Starter Page</a></li>                         
+                            <li class="nav-item"><a class="nav-link" href="pages-profile.html"><i class="ti-control-record"></i>Profile</a></li>
+                            <li class="nav-item"><a class="nav-link" href="pages-starter.html"><i class="ti-control-record"></i>Starter Page</a></li>
                             <li class="nav-item"><a class="nav-link" href="pages-timeline.html"><i class="ti-control-record"></i>Timeline</a></li>
                             <li class="nav-item"><a class="nav-link" href="pages-treeview.html"><i class="ti-control-record"></i>Treeview</a></li>
                         </ul>
-                    </li>           
+                    </li>
                 </ul>
-    
+
                 <div class="update-msg text-center">
                     <a href="javascript: void(0);" class="float-right close-btn text-white" data-dismiss="update-msg" aria-label="Close" aria-hidden="true">
                         <i class="mdi mdi-close"></i>
@@ -247,20 +247,20 @@
             </div>
         </div>
         <!-- end left-sidenav-->
-        
+
 
         <div class="page-wrapper">
             <!-- Top Bar Start -->
-            <div class="topbar">            
+            <div class="topbar">
                 <!-- Navbar -->
-                <nav class="navbar-custom">    
-                    <ul class="list-unstyled topbar-nav float-right mb-0">  
+                <nav class="navbar-custom">
+                    <ul class="list-unstyled topbar-nav float-right mb-0">
                         <li class="dropdown hide-phone">
                             <a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-toggle="dropdown" href="#" role="button"
                                 aria-haspopup="false" aria-expanded="false">
                                 <i data-feather="search" class="topbar-icon"></i>
                             </a>
-                            
+
                             <div class="dropdown-menu dropdown-menu-right dropdown-lg p-0">
                                 <!-- Top Search Bar -->
                                 <div class="app-search-topbar">
@@ -270,7 +270,7 @@
                                     </form>
                                 </div>
                             </div>
-                        </li>                      
+                        </li>
 
                         <li class="dropdown notification-list">
                             <a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-toggle="dropdown" href="#" role="button"
@@ -279,10 +279,10 @@
                                 <span class="badge badge-danger badge-pill noti-icon-badge">2</span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right dropdown-lg pt-0">
-                            
+
                                 <h6 class="dropdown-item-text font-15 m-0 py-3 border-bottom d-flex justify-content-between align-items-center">
                                     Notifications <span class="badge badge-primary badge-pill">2</span>
-                                </h6> 
+                                </h6>
                                 <div class="notification-menu" data-simplebar>
                                     <!-- item-->
                                     <a href="#" class="dropdown-item py-3">
@@ -314,7 +314,7 @@
                                     <a href="#" class="dropdown-item py-3">
                                         <small class="float-right text-muted pl-2">40 min ago</small>
                                         <div class="media">
-                                            <div class="avatar-md bg-soft-primary">                                                    
+                                            <div class="avatar-md bg-soft-primary">
                                                 <i data-feather="users" class="align-self-center icon-xs"></i>
                                             </div>
                                             <div class="media-body align-self-center ml-2 text-truncate">
@@ -361,7 +361,7 @@
                             <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button"
                                 aria-haspopup="false" aria-expanded="false">
                                 <span class="ml-1 nav-user-name hidden-sm">Nick</span>
-                                <img src="assets/images/users/user-5.jpg" alt="profile-user" class="rounded-circle" />                                 
+                                <img src="assets/images/users/user-5.jpg" alt="profile-user" class="rounded-circle" />
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
                                 <a class="dropdown-item" href="#"><i data-feather="user" class="align-self-center icon-xs icon-dual mr-1"></i> Profile</a>
@@ -371,18 +371,18 @@
                             </div>
                         </li>
                     </ul><!--end topbar-nav-->
-        
-                    <ul class="list-unstyled topbar-nav mb-0">                        
+
+                    <ul class="list-unstyled topbar-nav mb-0">
                         <li>
                             <button class="nav-link button-menu-mobile">
                                 <i data-feather="menu" class="align-self-center topbar-icon"></i>
                             </button>
-                        </li> 
+                        </li>
                         <li class="creat-btn">
                             <div class="nav-link">
                                 <a class=" btn btn-sm btn-soft-primary" href="#" role="button"><i class="fas fa-plus mr-2"></i>New Task</a>
-                            </div>                                
-                        </li>                           
+                            </div>
+                        </li>
                     </ul>
                 </nav>
                 <!-- end navbar-->
@@ -414,15 +414,15 @@
                                         <a href="#" class="btn btn-sm btn-outline-primary">
                                             <i data-feather="download" class="align-self-center icon-xs"></i>
                                         </a>
-                                    </div><!--end col-->  
-                                </div><!--end row-->                                                              
+                                    </div><!--end col-->
+                                </div><!--end row-->
                             </div><!--end page-title-box-->
                         </div><!--end col-->
                     </div><!--end row-->
                     <!-- end page title end breadcrumb -->
                     <div class="row">
-                        
-    
+
+
                         <div class="col-lg">
                             <div class="card">
                                 <div class="card-header">
@@ -463,21 +463,39 @@
                                                 <td>{{ $nampil->masa_garansi_barang }}</td>
                                                 <td>{{ $nampil->struk }}</td>
                                                 <td>
-                                                @if ($nampil->status=== 'pending')    
+                                                @if ($nampil->status=== 'pending')
                                                 <span class="badge badge-soft-warning">{{ $nampil->status }}</span>
-                                                @elseif ($nampil->status==='approve')
+                                                @elseif ($nampil->status==='approved')
                                                 <span class="badge badge-soft-success">{{ $nampil->status }}</span>
+                                                @elseif ($nampil->status==='rejected')
+                                                <span class="badge badge-soft-danger">{{ $nampil->status }}</span>
+                                                @elseif ($nampil->status==='waiting shipment')
+                                                <span class="badge badge-soft-warning">{{ $nampil->status }}</span>
                                                 @endif
                                                 </td>
                                                 <td>{{ $nampil->created_at }}</td>
                                                 <td class="text-right">
-    <form action="{{ route('barangapproved', ['barang' => $nampil->id]) }}" method="POST">
-        @csrf
-        <button type="submit" class="btn btn-action btn-success mb-0 me-2" title="Approve this booking">
-            <i class="fas fa-check"></i>
-        </button>
-    </form>
-</td>
+                                                    @if ($nampil->status==='pending')
+                                                    <a href="{{ route('barangapproved', ['barang' => $nampil->id]) }}">
+                                                        <button type="button" class="btn btn-action btn-success mb-0 me-2" title="Approve this booking">
+                                                            <i class="fas fa-check"></i>
+                                                        </button>
+                                                    </a>
+                                                    <a href="{{ route('barangreject', ['barang' => $nampil->id]) }}">
+                                                        <button type="button" class="btn btn-action btn-danger mb-0 me-2" title="Approve this booking">
+                                                            <i class="fas fa-check"></i>
+                                                        </button>
+                                                    </a>
+                                                    @elseif ($nampil->status==='rejected')
+                                                    <a href="{{ route('barangreject', ['barang' => $nampil->id]) }}">
+                                                        <button type="button" class="btn btn-action btn-danger mb-0 me-2" title="Approve this booking">
+                                                            <i class="fas fa-check"></i>
+                                                        </button>
+                                                    </a>
+                                                    @else
+                                                    <a href="/test/{{$nampil->id}}">kesini</a>
+                                                    @endif
+                                                </td>
 
                                             </tr>
                                             @endforeach
@@ -488,11 +506,11 @@
                             </div><!--end card-->
                         </div> <!-- end col -->
                     </div> <!-- end row -->
-    
-    
-                    
-                    
-   
+
+
+
+
+
 
                 </div><!-- container -->
 
@@ -504,7 +522,7 @@
         </div>
         <!-- end page-wrapper -->
 
-        
+
 
 
         <!-- jQuery  -->
@@ -520,7 +538,7 @@
 
         <!-- App js -->
         <script src="assets/js/app.js"></script>
-        
+
     </body>
 
 </html>

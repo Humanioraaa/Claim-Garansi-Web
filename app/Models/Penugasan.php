@@ -2,15 +2,25 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Barang;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Penugasan extends Model
 {
     use HasFactory;
 
     protected $table = 'penugasan';
-    protected $primaryKey = 'id_penugasan';
+    protected $primaryKey = 'id';
+
+    public function setTanggalSelesaiAttribute($value)
+    {
+        if (!empty($value)) {
+            $this->attributes['tanggal_selesai'] = \Carbon\Carbon::createFromFormat('Y-m-d', $value)->format('Y-m-d');
+        } else {
+            $this->attributes['tanggal_selesai'] = null;
+        }
+    }
 
     protected $fillable = [
         'tanggal_awal',
@@ -19,10 +29,12 @@ class Penugasan extends Model
         'id_barang'
     ];
 
-    public function Administrator()
+    public function Barang()
     {
-        return $this->belongsTo(User::class, 'id_administrator');
+        return $this->belongsTo(Barang::class, 'id_barang');
     }
+
+
 
     public function Admin_Garansi()
     {

@@ -87,6 +87,15 @@ Route::get('/1_manager_atur_role',  [RoleManager::class, 'index'])->middleware('
 
 //Admin Garansi
 Route::get('/2_admingaransi_dashboard', [AdminGaransi_Controller::class, 'index'])->middleware('admingaransionly');
+Route::get('/2_admingaransi_status', [AdminGaransi_Controller::class,'tampil'])->middleware('admingaransionly')->name('viewkomplain');
+// Route::get('/edit', function() {
+//     return view('2_admin_garansi_edit');
+// });
+
+Route::get('/2_admin_garansi_edit/{id}', [AdminGaransi_Controller::class, 'edit'])->middleware('admingaransionly')->name('edit');
+Route::post('/2_admin_garansi_edit/{id}', [AdminGaransi_Controller::class, 'store'])->middleware('admingaransionly')->name('edit_submit');
+
+
 
 
 //Administrator
@@ -95,18 +104,16 @@ Route::get('/penugasan', function() {
     return view('3_administrator_penugasan');
 });
 
-Route::get('/3_administrator_approving', [barangController::class, 'tampil'])->middleware('administratoronly')->name('barangindex');
-Route::get('/3_administrator_approving/{barang}/approve', [ApprovelController::class, 'ngeapprove'])->middleware('administratoronly')->name('barangapproved');
-Route::get('/3_administrator_approving/{barang}/reject', [ApprovelController::class, 'ngereject'])->middleware('administratoronly')->name('barangreject');
+Route::get('/3_administrator_approving', [barangController::class, 'tampil'])->name('barangindex');
+Route::get('/3_administrator_approving/{barang}/approve', [ApprovelController::class, 'ngeapprove'])->name('barangapproved');
+Route::get('/3_administrator_approving/{barang}/reject', [ApprovelController::class, 'ngereject'])->name('barangreject');
 
 
-Route::get('/3_administrator_form_menugaskan', [barangController::class, 'tugas'])->middleware('administratoronly')->name('tugaskan');
-Route::get('/3_administrator_penugasan', [AdministratorController::class, 'index'])->middleware('administratoronly')->name('nunjuk');
-Route::get('/3_administrator_penugasan/{users}', [AdministratorController::class, 'index'])->middleware('administratoronly')->name('nunjuk');
-Route::get('/3_administrator_penugasan/tugaskan', [AdministratorController::class, 'assign'])->middleware('administratoronly')->name('assign');
+Route::get('/3_administrator_penugasan', [AdministratorController::class, 'index'])->name('nunjuk');
+Route::get('/3_administrator_penugasan/{users}', [AdministratorController::class, 'index'])->name('nunjuk');
 
-Route::get('/test/{id}', [AdministratorController::class, 'test'])->middleware('administratoronly')->name('test');
-Route::post('/test/{id}', [AdministratorController::class, 'tunjuk'])->middleware('administratoronly')->name('tunjuk');
+Route::get('/test/{id}', [AdministratorController::class, 'test'])->name('test');
+Route::post('/test/{id}', [AdministratorController::class, 'tunjuk'])->name('tunjuk');
 //User
 Route::get('/service', function() {
     return view('4_user_service');

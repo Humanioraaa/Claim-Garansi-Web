@@ -17,7 +17,7 @@ class AdminGaransi_Only
     public function handle(Request $request, Closure $next): Response
     {
         if(Auth::user()->id_role !=2) {
-            return redirect('home');
+            return redirect('403');
         }
         return $next($request);
     }

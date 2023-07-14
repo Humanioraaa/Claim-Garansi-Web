@@ -10,10 +10,22 @@ use Illuminate\Support\Facades\Validator;
 
 class AdminGaransi_Controller extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {
+        $barang=Barang::all();
+        $komplain=Penugasan::all();
 
-        return view('2_admingaransi_dashboard');
+        $total=Barang::all()->count();
+
+        //Data untuk ditampilkan pada dashboard
+
+        $admin = Auth::user();
+        $data = Penugasan::where('id_user', $admin->id)->get();
+
+        $komplainIn = $data->whereIn('status', ['selesai', 'dikirim', 'gantibaru'])->count();
+        $selesai = $data->count();
+
+        return view('2_admingaransi_dashboard', compact('barang', 'komplain', 'total', 'komplainIn', 'selesai', 'admin', 'data'));
     }
 
     public function tampil(){

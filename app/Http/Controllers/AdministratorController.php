@@ -16,7 +16,7 @@ class AdministratorController extends Controller
     {
 
         $users=User::all()->where('id_role', 2);
-         return view('3_administrator_penugasan', compact('users'));
+         return view('3_administrator_dashboard', compact('users'));
     }
 
     public function test($id)
@@ -42,5 +42,18 @@ class AdministratorController extends Controller
         return redirect('3_administrator_approving');
     }
 
+    public function show(){
+        $barang=Barang::all();
+        $komplain=Penugasan::all();
+
+        //counting
+        $total=Barang::all()->count();
+        $komplainIn = Barang::whereNotIn('status', ['pending', 'approved'])->count();
+        $selesai = Barang::whereIn('status', ['gantibaru', 'selesai'])->count();
+
+
+
+        return view('3_administrator_view', compact('barang', 'komplain', 'total', 'komplainIn', 'selesai'));
+    }
 
 }

@@ -27,6 +27,14 @@
     <link rel="stylesheet" href="assets/css/magnific-popup.css" />
     <link rel="stylesheet" href="assets/css/spacing.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+
+    <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('assets/css/jquery-ui.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('assets/css/metisMenu.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('assets/plugins/daterangepicker/daterangepicker.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('assets/css/app.min.css')}}" rel="stylesheet" type="text/css" />
+
   </head>
 
   <body>
@@ -67,22 +75,11 @@
                 <nav id="mobile-menu">
                   <ul>
                     <li>
-                      <a href="service.html">Home</a>
+                      <a style="text-decoration: none" href="service">Home</a>
                     </li>
-                    <li>
-                      <a href="#">Pages</a>
-                      <ul class="submenu">
-                        <li><a href="service.html">Service</a></li>
-                        <li>
-                          <a href="#">Service Details</a>
-                        </li>
-                        <li><a href="faq.html">Faq</a></li>
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="faq.html">Faq</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+
+                    <li><a style="text-decoration: none" href="/4_user_statuspage">Status</a></li>
+                    <li><a style="text-decoration: none" href="/4_user_riwayat">Riwayat</a></li>
                   </ul>
                 </nav>
               </div>
@@ -91,7 +88,7 @@
               <div
                 class="tp-header__right-two d-flex align-items-center justify-content-end"
               >
-                <a
+                <a style="text-decoration: none"
                   class="tp-btn-blue-square d-none d-md-block"
                   href="logout"
                   ><span>Logout</span></a
@@ -113,19 +110,46 @@
 
 
     <!-- JS here -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/waypoints.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/swiper-bundle.js"></script>
-    <script src="assets/js/slick.js"></script>
-    <script src="assets/js/magnific-popup.js"></script>
-    <script src="assets/js/counterup.js"></script>
-    <script src="assets/js/wow.js"></script>
-    <script src="assets/js/nice-select.js"></script>
-    <script src="assets/js/meanmenu.js"></script>
-    <script src="assets/js/isotope-pkgd.js"></script>
-    <script src="assets/js/imagesloaded-pkgd.js"></script>
+    <script src="{{ asset('assets/js/jquery.js') }}"></script>
+    <script src="{{ asset('assets/js/waypoints.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/swiper-bundle.js') }}"></script>
+    <script src="{{ asset('assets/js/slick.js') }}"></script>
+    <script src="{{ asset('assets/js/magnific-popup.js') }}"></script>
+    <script src="{{ asset('assets/js/counterup.js') }}"></script>
+    <script src="{{ asset('assets/js/wow.js') }}"></script>
+    <script src="{{ asset('assets/js/nice-select.js') }}"></script>
+    <script src="{{ asset('assets/js/meanmenu.js') }}"></script>
+    <script src="{{ asset('assets/js/isotope-pkgd.js') }}"></script>
+    <script src="{{ asset('assets/js/imagesloaded-pkgd.js') }}"></script>
 
-    <script src="assets/js/main.js"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
+
+
+    <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/metismenu.min.js') }}"></script>
+    <script src="{{ asset('assets/js/waves.js') }}"></script>
+    <script src="{{ asset('assets/js/feather.min.js') }}"></script>
+    <script src="{{ asset('assets/js/simplebar.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery-ui.min.js') }}"></script>
+    <script src="{{ asset('assets/js/moment.js') }}"></script>
+    <script src="{{ asset('assets/plugins/daterangepicker/daterangepicker.js') }}"></script>
+
+    <script src="{{ asset('assets/plugins/apex-charts/apexcharts.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/jvectormap/jquery-jvectormap-us-aea-en.js') }}"></script>
+    <script src="{{ asset('assets/plugins/apex-charts/irregular-data-series.js') }}"></script>
+    <script src="{{ asset('assets/plugins/apex-charts/ohlc.js') }}"></script>
+    <script src="{{ asset('assets/pages/jquery.apexcharts.init.js') }}"></script>
+    <script src="{{ asset('assets/pages/jquery.sales_dashboard.init.js') }}"></script>
+
+    <script src="{{ asset('assets/pages/jquery.analytics_dashboard.init.js') }}"></script>
+
+    <!-- App js -->
+    <script src="{{ asset('assets/js/app.js') }}"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
   </body>
 </html>

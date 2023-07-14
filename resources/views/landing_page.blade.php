@@ -31,7 +31,7 @@
         <!--NAVIGATION ******************************************************************************************-->
         <header id="header">
           <nav class="navbar navbar-light ts-separate-bg-element">
-            <a class="navbar-brand" href=""> GARANSI </a>
+            <a class="navbar-brand" href=""> Claimify </a>
             <!--end navbar-brand-->
 
             <!--end navbar-toggler-->
@@ -46,7 +46,7 @@
             <div class="row">
               <!--Page Title-->
               <div class="col-md-6">
-                <h1>Claim Garansi Anda<br />Sekarang</h1>
+                <h1> <span>Claimify</span>  </h1>
                 <p>Claim Garansi Device Anda Sekarang Lebih Mudah Dan Cepat.</p>
                 <a href="/login" class="btn btn-primary mr-2">Login</a>
                 <a href="/login" class="btn btn-outline-dark"

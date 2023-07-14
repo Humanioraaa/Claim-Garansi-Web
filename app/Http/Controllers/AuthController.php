@@ -61,7 +61,7 @@ class AuthController extends Controller
             'email' => 'required|unique:users',
             'password' => 'required',
         ])->validate();
-    
+
         User::create([
             'name' => $request->name,
             'email' => $request->email,
@@ -73,11 +73,11 @@ class AuthController extends Controller
     public function logout(Request $request)
 {
     Auth::logout();
- 
+
     $request->session()->invalidate();
- 
+
     $request->session()->regenerateToken();
- 
+
     return redirect('/logout');
 }
 

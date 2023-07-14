@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('content')
-    <main>
+<main style="width: 100vw">
       <!-- breadcrumb area start -->
       <div
         class="breadcrumb__area breadcrumb-height p-relative grey-bg"

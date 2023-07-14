@@ -42,19 +42,18 @@ Route::get('/home', function() {
     return view('landing_page');
 });
 
-Route::get('/kontol', function() {
+Route::get('/helpdesk', function() {
     return view('helpdesk-index');
 });
 
-
-
-//Route::group(['middleware' => 'guestonly'], function () {});
 
 //Guest Routes
 
     Route::get('/', function() {
         return view('landing_page');
     });
+
+
 
     // login register
     Route::get('/login', [AuthController::class, 'login'])->name('login');
@@ -66,97 +65,93 @@ Route::get('/kontol', function() {
 
 
 
+    Route::middleware('auth', 'guestonly')->group(function () {
 
-
-
-
+        Route::get('/403', function() {
+            return view('auth-403');
+        });
+    });
 
 
 //Manager
-Route::get('/1_manager_dashboard', [ManagerController::class, 'index'])->middleware('manageronly');
 
-Route::get('/managerchart', function() {
-    return view('1_manager_chart');
-})->middleware('manageronly');
+Route::middleware('auth', 'manageronly')->group(function () {
 
-Route::get('/1_manager_atur_role',  [RoleManager::class, 'index'])->middleware('manageronly');
+    Route::get('1_manager_dashboard', [ManagerController::class, 'index']);
 
-    //ganti role
-    Route::put('/user_edit/{id}', [UserController::class, 'changerole']);
+    Route::get('1_manager_staff', [ManagerController::class, 'staff_stat']);
+
+    Route::get('/1_manager_staffdetail/{id}', [ManagerController::class, 'rerata'])->name('detail');
+});
+
 
 
 //Admin Garansi
-Route::get('/2_admingaransi_dashboard', [AdminGaransi_Controller::class, 'index'])->middleware('admingaransionly');
-Route::get('/2_admingaransi_status', [AdminGaransi_Controller::class,'tampil'])->middleware('admingaransionly')->name('viewkomplain');
-// Route::get('/edit', function() {
-//     return view('2_admin_garansi_edit');
-// });
 
-Route::get('/2_admin_garansi_edit/{id}', [AdminGaransi_Controller::class, 'edit'])->middleware('admingaransionly')->name('edit');
-Route::post('/2_admin_garansi_edit/{id}', [AdminGaransi_Controller::class, 'store'])->middleware('admingaransionly')->name('edit_submit');
+Route::middleware('auth', 'admingaransionly')->group(function () {
 
+        Route::get('/2_admingaransi_dashboard', [AdminGaransi_Controller::class, 'index']);
+        Route::get('/2_admingaransi_status', [AdminGaransi_Controller::class,'tampil'])->name('viewkomplain');
+        Route::get('/2_admin_garansi_edit/{id}', [AdminGaransi_Controller::class, 'edit'])->name('edit');
+        Route::post('/2_admin_garansi_edit/{id}', [AdminGaransi_Controller::class, 'store'])->name('edit_submit');
 
+    });
 
 
 //Administrator
-Route::get('/3_administrator_dashboard', [AdministratorController::class, 'index'])->middleware('administratoronly');
-Route::get('/penugasan', function() {
-    return view('3_administrator_penugasan');
+
+
+Route::middleware('auth', 'administratoronly')->group(function () {
+
+    //Dashboard
+    Route::get('/3_administrator_dashboard', [AdministratorController::class, 'index']);
+    Route::get('/3_administrator_dashboard', [barangController::class, 'show'])->name('barangindex');
+
+
+    //Rute untuk approving barang
+    Route::get('/3_administrator_approving', [barangController::class, 'tampil'])->name('barangindex');
+    Route::get('/3_administrator_approving/{barang}/approve', [ApprovelController::class, 'ngeapprove'])->name('barangapproved');
+    Route::get('/3_administrator_approving/{barang}/reject', [ApprovelController::class, 'ngereject'])->name('barangreject');
+    Route::get('/3_administrator_view', [AdministratorController::class, 'show']);
+
+
+    Route::get('/test/{id}', [AdministratorController::class, 'test'])->name('test');
+    Route::post('/test/{id}', [AdministratorController::class, 'tunjuk'])->name('tunjuk');
 });
 
-Route::get('/3_administrator_approving', [barangController::class, 'tampil'])->name('barangindex');
-Route::get('/3_administrator_approving/{barang}/approve', [ApprovelController::class, 'ngeapprove'])->name('barangapproved');
-Route::get('/3_administrator_approving/{barang}/reject', [ApprovelController::class, 'ngereject'])->name('barangreject');
 
-
-Route::get('/3_administrator_penugasan', [AdministratorController::class, 'index'])->name('nunjuk');
-Route::get('/3_administrator_penugasan/{users}', [AdministratorController::class, 'index'])->name('nunjuk');
-
-Route::get('/test/{id}', [AdministratorController::class, 'test'])->name('test');
-Route::post('/test/{id}', [AdministratorController::class, 'tunjuk'])->name('tunjuk');
 //User
-Route::get('/service', function() {
-    return view('4_user_service');
-})->middleware('useronly');
+
+Route::middleware('auth', 'useronly')->group(function () {
+
+    Route::get('/4_user_service', [UserController::class, 'index']);
+
+    Route::get('/service', function() {
+        return view('4_user_service');
+    });
 
 
-Route::get('/4_user_service', [UserController::class, 'index'])->middleware('useronly');
+    // Rute untuk Upload barang
+    Route::get('/4_user_upload', [barangController::class, 'add']);
+    Route::post('/4_user_upload', [barangController::class, 'store']);
+
+    // Rute Menu Yang Tersedia di index
 
 
+    Route::get('/4_user_statuspage', [UserController::class, 'cekstatus'])->name('status');
 
+    Route::get('/faq', function() {
+        return view('4_user_faq');
+    });
 
+    Route::get('/contact', function() {
+        return view('4_user_contact');
+    });
 
+    Route::get('/about', function() {
+        return view('4_user_about');
+    });
 
-Route::get('/riwayat', function() {
-    return view('4_user_riwayat');
-})->middleware('useronly');
+    Route::get('/4_user_riwayat', [UserController::class, 'notifikasi'])->name('riwayat');
 
-
-Route::get('/statuspage', function() {
-    return view('4_user_statuspage');
-})->middleware('useronly');
-
-Route::get('/faq', function() {
-    return view('4_user_faq');
-})->middleware('useronly');
-
-Route::get('/contact', function() {
-    return view('4_user_contact');
-})->middleware('useronly');
-
-Route::get('/about', function() {
-    return view('4_user_about');
-})->middleware('useronly');
-
-
-
-// Route::get('/4_user_upload', [barangController::class, 'add']);
-// Route::post('/4_user_upload', [barangController::class, 'store']);
-
-
-Route::get('/4_user_upload', [barangController::class, 'add']);
-Route::post('/4_user_upload', [barangController::class, 'store']);
-
-
-
-
+});
